@@ -49,6 +49,7 @@ function setup() {
         speed = 0.1
         //console.log(windowWidth);
         //console.log("change to pos speed");
+        //comment
       }
     
     //Uncomment the line below for movement
