@@ -70,7 +70,7 @@ var all_questions = [{
       wrong: ["$5", "$100", "$1500"]
     }
   }, {
-    question_string: "Which German character was formerly a prisoner or war in Europe for 5  years before migrating to work on the Snowy Hydro Scheme?",
+    question_string: "Which German character was formerly a prisoner of war in Europe for 5  years before migrating to work on the Snowy Hydro Scheme?",
     choices: {
       correct: "Heinz Jeromin",
       wrong: ["Ildiko Botka", "Kazys Sinkevicius", "Paul Meredith"]

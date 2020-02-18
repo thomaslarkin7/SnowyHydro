@@ -9,6 +9,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
         <script src = "scripts.js"></script>  -->
     <title>Snowy Mountains Hydro Memory Game</title>
 
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
     
@@ -26,6 +27,16 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+=======
+    <link rel="stylesheet" href = "styles.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Righteous|Timmana&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+
     <script type="text/javascript" src="sketch.js"></script>
     
 </head>
@@ -37,10 +48,17 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
 <!-----------------------------P5.JS-------------------------------------------------->
 <div id="loadOverlay">
         <div id = "overlayText">
+HEAD
                 <div id= "projectTitle"><strong>Snowy Mountains Hydroelectric Project</strong></div>
                 <br><br><br>
                 <div id= "projectSubtitle">Memory Game</div>
                 <div id ="overlayDescription">Learn more about this defining moment in Australia's history by playing the card game of memory. 
+
+                <div id = "h1"><strong>Snowy Mountains Hydroelectric Project</strong></div>
+                <br><br><br>
+                <div id= "h2">Memory Game</div>
+                <div id ="h2_text">Learn more about this defining moment in Australia's history by playing the card game of memory. 
+
                         Match "pairs" of cards to reveal interesting stories about the men and women who worked 
                         on this project. Once the memory game is complete, test your knowledge on a quiz!</div>
                 <button type="button" id="buttonIntro" onClick="off()">PLAY GAME</button>
@@ -51,6 +69,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
         </div>
         <button type="button" id="buttonAuthor" onClick = "toggleModalTom()">Developed by Thomas Larkin</button>
         <button type="button" id="buttonTeacher" onClick = "toggleModalTeacher()">For Teachers</button>
+
        
        
        
@@ -89,6 +108,11 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
         <!--
         <div class="modalAuthor">
                 <div id = "thomas" class="modalAuthor-content">
+
+         Author Information Modal Popup (Thomas Larkin) -->
+        <div class="modalAuthor">
+                <div id = "thomas" class="modalAuthor-content">
+
                         <span class="close-buttonAuthor">&times;</span>
                         <h1>Thomas Larkin</h1>
                         <div id = "modalInfoAuthor">
@@ -107,7 +131,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                         <img id = "modalIMG" src="img/TLarkin_Sketch.svg" alt="TLarkin"/>
                 </div>
         </div>
-        -->
+        
 
 <!-- EXPERIMENTING WITH BOOTSTRAP MODAL-->
 <!-- Button trigger modal
@@ -197,6 +221,22 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 </div>
                                 <div class="row top-buffer"></div>
                         </div>
+=======
+
+        <!-- Teacher Instruction Box Modal Popup  -->
+        <div class="modalAuthor">
+                <div id = "thomas" class="modalAuthor-content">
+                        <span class="close-buttonAuthor">&times;</span>
+                        <h1>For Teachers</h1>
+                        <div id = "modalInfoAuthor">
+                                <div id = "modalBlurbAuthor">
+                                      For Teachers<br><br>
+                                      
+                                </div>
+                                
+                        </div>
+                        <img id = "modalIMG" src="img/TLarkin_Sketch.svg" alt="TLarkin"/>
+>>>>>>> a0428121debb1d0b76dc18f36ec44b93e7710c2a
                 </div>
         </div>
 
@@ -431,7 +471,10 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
 
         <!-- Trigger/Open The Modal -->
 
+
         <!--First Card Modal -->
+        <!--First Card Modal-->
+
         <div class="modal">
                 <div id = "aurelia" class="modal-content">
                         <span class="close-button">&times;</span>
@@ -733,8 +776,8 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 chase a new life. His wife and two children joined him on the trip to Australia for 
                                 work on the Snowy Hydro.
                                 <br><br>
-                                He spent 4 years working for the Snowy Hydro and afterwards, left to work on 
-                                electrical grid networks in NSW and later on, the Royal Air Force. He was described 
+                                He spent 4 years working for the Snowy Hydro and afterwards left to work on 
+                                electrical grid networks in NSW, and later on, the Royal Air Force. He was described 
                                 by his boss at the Snowy Hydro as being a "widely experienced, capable and energetic 
                                 engineer."
                                 </div>  
@@ -759,7 +802,13 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 and was successful!
                                 <br><br>
                                 Most of his work on the Snowy Hydro Scheme involved soil testing, rock bolt development 
-                                and technical report writing. Most of his work was situated around the Khancoban dam 
+                                and technical report writing. Most of his work was situated around the 
+                                <div class="tooltip">Khancoban
+                                        <span class="tooltiptext">Khancoban is a town in the Kosciuszko National Park
+                                                built to house workers of the Snowy Hydro scheme.
+                                        </span>
+                                </div>
+                                 dam 
                                 region of the project.
                                 </div>  
                         </div>
@@ -777,7 +826,13 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 <strong>Years Employed: </strong>17<br>
                                 <strong>Country of Origin: </strong>Australia<br><br>
                                 <div id = "modalBlurb">
-                                Before applying for her job as a tracer on the Snowy Hydro scheme, Constance had 
+                                Before applying for her job as a 
+                                <div class="tooltip">tracer
+                                        <span class="tooltiptext"> a tracer is someone who draws detailed drawings of equipment and objects such as 
+                                                generators, bridges and buildings
+                                        </span>
+                                </div>
+                                on the Snowy Hydro scheme, Constance had 
                                 experience working for an Engineering company in London and as an artist. She moved to 
                                 Cooma in 1957 and her work as a tracer involved sketching detailed drawings of gates, 
                                 valves, power plants and graphs.
@@ -803,9 +858,15 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 <strong>Country of Origin: </strong>Great Britain (born in New Zealand)<br><br>
                                 <div id = "modalBlurb">
                                 Rudolf was born in New Zealand and studied at university in Auckland. He applied for a position as an 
-                                Electrical Engineer but was instead offered the role of 'Scientific Officer', something he was not 
+                                <div class="tooltip">Electrical Engineer
+                                        <span class="tooltiptext"> An electrical engineer is someone who develops, repairs and manages
+                                                electrical circuits and the devices that they are used within
+                                        </span>
+                                </div> 
+                                 but was instead offered the role of 'Scientific Officer', something he was not 
                                 pleased about! At the same time, he was offered a promotion at his work in New Zealand, but decided 
-                                to accept the offer from the Snowy Hydro scheme, since he believed the work would be more interesting.
+                                to accept the offer from the Snowy Hydro scheme, since he believed that over time, the sort of work
+                                available in Australia would be more interesting.
                                 <br><br>
                                 He moved his family from New Zealand to Australia to begin work with the Snowy Hydro 
                                 scheme in 1956.
@@ -857,7 +918,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 <div id = "modalBlurb">
                                 Thomas worked as an electrical engineer for the Snowy Hydro scheme. He was a highly skilled 
                                 employee and during his time here, was granted 2 years of leave to undertake work experience in 
-                                Sweden. The Snowy Hydro scheme believed that in gaining experience abroad, Mr Crawford would return 
+                                Sweden. The Snowy Hydro scheme believed that in gaining experience abroad Mr Crawford would return 
                                 with new knowledge to benefit the project in Australia.
                                 <br><br>
                                 After enjoying work and life in Europe, he petitioned to remain abroad for longer than 
@@ -924,10 +985,10 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 used in the construction of topographical scale models for publicity purposes and in the 
                                 construction of models for the hydraulics laboratory.
                                 <br><br>
-                                In his first year of work with the Snowy Hydro authority, he prepared scale models of the 
+                                In his first year of work with the Snowy Hydro authority he prepared scale models of the 
                                 Snowy Mountains area which were used for display purposes in Melbourne and Sydney.
                                 His skills were highly sought after by the scheme and he spent some time on transfer with 
-                                the Public Relations team in Sydney producing display models of the Snowy Hydro Scheme.
+                                the Public Relations team in Sydney, producing display models of the Snowy Hydro Scheme.
                                 <br><br>
                                 He was skilled with his hands and his work as a model maker also led to work in restoring 
                                 furniture for the Snowy Hydro scheme.

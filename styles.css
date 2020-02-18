@@ -409,7 +409,6 @@ canvas{
     border-radius: 0.5rem;
 }
 
-
 .modalAuthor {
     position: fixed;
     left: 0;
@@ -434,38 +433,15 @@ canvas{
     background-color:rgb(66, 123, 221);
     font-family: 'Roboto';
     color: black;
-    padding: 1.5rem 1.5rem;
+    padding: 1rem 1.5rem;
     width: 60%;
-    height: 70%;
-    border-radius: 0.5rem;
-}
-
-.modalTeacher-content {
-    position: absolute;
-    overflow-y: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /*
-    background-color: rgb(114, 131, 181);
-    */
-    background-color:rgb(66, 123, 221);
-    font-family: 'Roboto';
-    color: black;
-    padding: 1.5rem 1.5rem;
-    width: 60%;
-    height: 70%;
+    height: 75%;
     border-radius: 0.5rem;
 }
 
 .close-buttonAuthor {
-    position: absolute;
-    top: 2%;
-    right: 5%;
-    /*
     float: right;
-    */
-    width: 2.5rem;
+    width: 1.5rem;
     line-height: 1.5rem;
     text-align: center;
     cursor: pointer;
@@ -504,19 +480,8 @@ canvas{
     border-radius: 0.5rem;
 }
 
-#modalIMGA{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 5%;
-    width: 85%;
-}
-
-.colTextAuthor{
-    font-size: 1.4vw;
-    text-align: justify;
-}
-
 #modalIMG{
+    
     position: -webkit-sticky;
     position: sticky;
     top: 5%;
@@ -546,7 +511,6 @@ canvas{
     font-size: 20px;
     line-height: 30px;
 }
-
 
 #modalInfoAuthor{
     position: absolute;
@@ -601,7 +565,6 @@ canvas{
 .close-button:hover {
     background-color: darkgray;
 }
-
 
 /* Tooltip container */
 .tooltip {
