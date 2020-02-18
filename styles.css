@@ -31,6 +31,24 @@ content {position: relative; z-index: 2; }
     font-family: 'Roboto';
 }
 
+#projectTitle{
+    font-size: 5vw;
+}
+
+#projectSubtitle{
+    font-size: 6vw;
+    font-family: 'Timmana';
+}
+
+#overlayDescription{
+    font-family: 'Roboto';
+    font-size: 1.7vw;
+    text-align: justify;
+    position: absolute;
+    left: 15%;
+    right: 15%; 
+}
+
 #h1{
     font-size: 70px;
 }
@@ -40,15 +58,6 @@ content {position: relative; z-index: 2; }
     font-size: 80px;
 }
 
-#h2_text{
-    font-family: 'Roboto';
-    font-size: 25px;
-    text-align: justify;
-    position: absolute;
-    left: 20%;
-    right: 20%;
-
-}
 
 #h3{
     font-size: 20px;
@@ -364,6 +373,13 @@ canvas{
 /*----------------------------------------------------*/
 /*--https://sabe.io/tutorials/how-to-create-modal-popup-box-- */
 
+.top-buffer { margin-top:25px; }
+.teacherTitle{text-align: center; font-family: 'Timmana'; font-size: 3.5vw;}
+.colText{
+    font-size: 1.4vw;
+    text-align: justify;
+}
+
 .modal {
     position: fixed;
     left: 0;
@@ -371,8 +387,10 @@ canvas{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    
     opacity: 0;
     visibility: hidden;
+    
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
@@ -390,6 +408,7 @@ canvas{
     height: 55%;
     border-radius: 0.5rem;
 }
+
 
 .modalAuthor {
     position: fixed;
@@ -415,15 +434,38 @@ canvas{
     background-color:rgb(66, 123, 221);
     font-family: 'Roboto';
     color: black;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 1.5rem;
     width: 60%;
-    height: 75%;
+    height: 70%;
+    border-radius: 0.5rem;
+}
+
+.modalTeacher-content {
+    position: absolute;
+    overflow-y: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*
+    background-color: rgb(114, 131, 181);
+    */
+    background-color:rgb(66, 123, 221);
+    font-family: 'Roboto';
+    color: black;
+    padding: 1.5rem 1.5rem;
+    width: 60%;
+    height: 70%;
     border-radius: 0.5rem;
 }
 
 .close-buttonAuthor {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    /*
     float: right;
-    width: 1.5rem;
+    */
+    width: 2.5rem;
     line-height: 1.5rem;
     text-align: center;
     cursor: pointer;
@@ -462,15 +504,36 @@ canvas{
     border-radius: 0.5rem;
 }
 
+#modalIMGA{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5%;
+    width: 85%;
+}
+
+.colTextAuthor{
+    font-size: 1.4vw;
+    text-align: justify;
+}
+
 #modalIMG{
-    
     position: -webkit-sticky;
     position: sticky;
     top: 5%;
     left: 43%;
     height: 82%;
     width: 55%;
+}
 
+#instructionsT{
+    top: 5%;
+    bottom: 5%;
+    /*
+    height: 100%;
+    */
+    
+    width: 100%;
+    
 }
 
 #modalInfo{
@@ -484,26 +547,47 @@ canvas{
     line-height: 30px;
 }
 
+
 #modalInfoAuthor{
     position: absolute;
     text-align: justify;
     top: 13%;
     left: 20px;
     color: black;
+    /*
     right: 55%;
+    */
     font-size: 20px;
     line-height: 30px;
 }
 
+
+/*
 #modalBlurbAuthor{
 
     font-size: 20px;
     line-height: 20px;
 }
+*/
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
 
 #modalBlurb{
     font-size: 15px;
     line-height: 20px;
+}
+
+.show-modalC {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 .close-button {
     float: right;
@@ -517,12 +601,7 @@ canvas{
 .close-button:hover {
     background-color: darkgray;
 }
-.show-modal {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1.0);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-}
+
 
 /* Tooltip container */
 .tooltip {

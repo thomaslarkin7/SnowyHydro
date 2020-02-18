@@ -8,15 +8,24 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
         <!--<script src = "libraries/p5.js"></script>
         <script src = "scripts.js"></script>  -->
     <title>Snowy Mountains Hydro Memory Game</title>
-    <link rel="stylesheet" href = "styles.css">
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    
+    <link rel="stylesheet" href = "styles.css">
+<!--
+    <link href = "Bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    -->
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Righteous|Timmana&display=swap" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="sketch.js"></script>
     
 </head>
@@ -28,10 +37,10 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
 <!-----------------------------P5.JS-------------------------------------------------->
 <div id="loadOverlay">
         <div id = "overlayText">
-                <div id = "h1"><strong>Snowy Mountains Hydroelectric Project</strong></div>
+                <div id= "projectTitle"><strong>Snowy Mountains Hydroelectric Project</strong></div>
                 <br><br><br>
-                <div id= "h2">Memory Game</div>
-                <div id ="h2_text">Learn more about this defining moment in Australia's history by playing the card game of memory. 
+                <div id= "projectSubtitle">Memory Game</div>
+                <div id ="overlayDescription">Learn more about this defining moment in Australia's history by playing the card game of memory. 
                         Match "pairs" of cards to reveal interesting stories about the men and women who worked 
                         on this project. Once the memory game is complete, test your knowledge on a quiz!</div>
                 <button type="button" id="buttonIntro" onClick="off()">PLAY GAME</button>
@@ -42,7 +51,42 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
         </div>
         <button type="button" id="buttonAuthor" onClick = "toggleModalTom()">Developed by Thomas Larkin</button>
         <button type="button" id="buttonTeacher" onClick = "toggleModalTeacher()">For Teachers</button>
+       
+       
+       
+
         <!-- Author Information Modal Popup (Thomas Larkin) -->
+        <div class="modalAuthor">
+                <div id = "thomas" class="modalAuthor-content">
+                        <div class="container">
+                                <div class="row">  
+                                        <div class="col teacherTitle">About the Creator</div>
+                                        <span class="close-buttonAuthor">&times;</span>
+                                </div>
+                                <div class="row top-buffer">
+                                        <div class="col-6 colText">
+                                                My name is Thomas Larkin. <br><br>
+                                                I study Engineering and Arts at the Australian National University. I made this digital resource as part
+                                                of a course investing the use of digital methods to reimagine historical artifacts. <br><br>
+                                                I decided to focus on the construction of the Snowy Mountains Hydroelectric system because I was fascinated 
+                                                by the impacts this project had on both the technical and social landscape of Australia.<br><br>
+                                                I built this resource using some basic web development skills, resources from the National Archives of Australia and 
+                                                the use of Adobe Illustrator to create each of the character cards in the memory game. <br><br>
+                                                I hope you enjoy using this digital resource! - January 2020 
+                                        </div>
+                                        <div class="col-6">
+                                                <img id = "modalIMGA" src="img/TLarkin_Sketch.svg" alt="TLarkin"/>
+                                        </div>
+                                </div>
+                                <div class="row top-buffer"></div>
+                        </div>
+                </div>
+        </div>
+
+
+        <!----------------------------------------------------->
+        
+        <!--
         <div class="modalAuthor">
                 <div id = "thomas" class="modalAuthor-content">
                         <span class="close-buttonAuthor">&times;</span>
@@ -63,20 +107,96 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                         <img id = "modalIMG" src="img/TLarkin_Sketch.svg" alt="TLarkin"/>
                 </div>
         </div>
+        -->
 
-        <!-- Teacher Instruction Box Modal Popup  -->
+<!-- EXPERIMENTING WITH BOOTSTRAP MODAL-->
+<!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+      </button>
+      
+      Modal
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+-->
+
+
         <div class="modalAuthor">
-                <div id = "thomas" class="modalAuthor-content">
-                        <span class="close-buttonAuthor">&times;</span>
-                        <h1>For Teachers</h1>
-                        <div id = "modalInfoAuthor">
-                                <div id = "modalBlurbAuthor">
-                                      For Teachers<br><br>
-                                      
+                <div id = "thomas" class="modalTeacher-content">
+                        <div class="container">
+                                <div class="row">  
+                                        <div class="col teacherTitle">How to use this resource</div>
+                                        <span class="close-buttonAuthor">&times;</span>
                                 </div>
-                                
+                                <div class="row top-buffer">
+                                        <div class="col-6 colText">
+                                                The first part of this resource is a memory game. There are 10 pairs of cards to match,
+                                                so 20 cards in total. Every time the game loads, a different set of 10 cards are chosen from 
+                                                a sample of 18. Each user will have different cards, in different positions to match.
+                                        </div>
+                                        <div class="col-6">
+                                                <img id = "instructionsT" src="img/teacherInstructions/instructions1.svg" alt="Teacher Instructions 1"/>
+                                        </div>
+                                </div>
+                                <div class="row top-buffer">
+                                        <div class="col-6">
+                                                <img id = "instructionsT" src="img/teacherInstructions/instructions2.svg" alt="Teacher Instructions 2"/>
+                                        </div>
+                                        <div class="col-6 colText">
+                                                Users can turn over cards by clicking on them. The aim of this first part of the resource is 
+                                                to match all 10 cards as quickly as possible.
+                                        </div>
+                                </div>
+                                <div class="row top-buffer">
+                                        <div class="col-6 colText">
+                                                When a user discovers a match, a popup will appear displaying further information about the 
+                                                person shown on the card. Each of the characters in this game is based on a real person 
+                                                who lived and worked on the Snowy Hydro Scheme. Other than the depiction of the person,
+                                                all other information is factual.
+                                        </div>
+                                        <div class="col-6">
+                                                <img id = "instructionsT" src="img/teacherInstructions/instructions3.svg" alt="Teacher Instructions 2"/>
+                                        </div>
+                                </div>
+                                <div class="row top-buffer">
+                                        <div class="col-6">
+                                                <img id = "instructionsT" src="img/teacherInstructions/instructions4.svg" alt="Teacher Instructions 3"/>
+                                        </div>
+                                        <div class="col-6 colText">
+                                                Once a user has correctly matched all 10 cards, they will be redirected to the second part of
+                                                this resource, a quiz. The quiz consists of 10 questions based on information from the 
+                                                10 cards the user has just matched.
+                                        </div>
+                                </div>
+                                <div class="row top-buffer">
+                                        <div class="col-6 colText">
+                                                During this quiz, the user can click on any of the character cards displayed along the 
+                                                bottom of the screen to read more information about that character. This will give the 
+                                                user all the resources they need to ensure they get the best score in the quiz!
+                                        </div>
+                                        <div class="col-6">
+                                                <img id = "instructionsT" src="img/teacherInstructions/instructions5.svg" alt="Teacher Instructions 5"/>
+                                        </div>
+                                </div>
+                                <div class="row top-buffer"></div>
                         </div>
-                        <img id = "modalIMG" src="img/TLarkin_Sketch.svg" alt="TLarkin"/>
                 </div>
         </div>
 
@@ -311,7 +431,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
 
         <!-- Trigger/Open The Modal -->
 
-        <!--First Card Modal-->
+        <!--First Card Modal -->
         <div class="modal">
                 <div id = "aurelia" class="modal-content">
                         <span class="close-button">&times;</span>
@@ -335,7 +455,8 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                 </div>
         </div>
 
-        <!--Second Card Modal-->
+
+        <!--Second Card Modal -->
         <div class="modal">
                 <div id = "vue" class="modal-content">
                         <span class="close-button">&times;</span>

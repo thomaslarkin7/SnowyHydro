@@ -63,6 +63,8 @@ var modal = document.querySelector(".modal");
 var modals = document.getElementsByClassName('modal');
 var imgBs = document.getElementsByClassName('imgB');
 
+//console.log(modals);
+
 // Author popup modal
 var modalAuthor = document.getElementsByClassName('modalAuthor');
 var closeButtonsAuthor = document.getElementsByClassName('close-buttonAuthor');
@@ -104,7 +106,6 @@ function checkForMatch(){
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
     if (isMatch == true){
-        
         //console.log('We Have a Match');
         //if the cards that are matched are the Australia cards, toggle the 'Australia' modal
         //if (firstCard.dataset.framework == 'australia'){
@@ -138,7 +139,7 @@ function checkForMatch(){
     //ternary operator
     isMatch ? disableCards() : unflipCards();
 }//end function checkForMatch
-
+//
 //console.log(imgBs);
     //If the cards matched are the Australia Cards, toggle 'Australia' Modal
 
@@ -152,62 +153,68 @@ function toggleModalTeacher(){
     console.log("something clicked here");
 }
 
-function toggleModalA(){modals[0].classList.toggle("show-modal");}
+
+//console.log(modals[0].classList);
+//console.log(modalAuthor[0].classList);
+//console.log(imgBs[0]);
+
+function toggleModalA(){modals[0].classList.toggle("show-modalC");}
 function toggleImgA(){imgBs[0].style.display = "block";}
 
-function toggleModalV(){modals[1].classList.toggle("show-modal");}
+function toggleModalV(){modals[1].classList.toggle("show-modalC");}
 function toggleImgV(){imgBs[1].style.display = "block";}
 
-function toggleModalAn(){modals[2].classList.toggle("show-modal");}
+function toggleModalAn(){modals[2].classList.toggle("show-modalC");}
 function toggleImgAn(){imgBs[2].style.display = "block";}
 
-function toggleModalE(){modals[3].classList.toggle("show-modal");}
+function toggleModalE(){modals[3].classList.toggle("show-modalC");}
 function toggleImgE(){imgBs[3].style.display = "block";}
 
-function toggleModalB(){modals[4].classList.toggle("show-modal");}
+function toggleModalB(){modals[4].classList.toggle("show-modalC");}
 function toggleImgB(){imgBs[4].style.display = "block";}
 
-function toggleModalR(){modals[5].classList.toggle("show-modal");}
+function toggleModalR(){modals[5].classList.toggle("show-modalC");}
 function toggleImgR(){imgBs[5].style.display = "block";}
 
-function toggleModalH(){modals[6].classList.toggle("show-modal");}
+function toggleModalH(){modals[6].classList.toggle("show-modalC");}
 function toggleImgH(){imgBs[6].style.display = "block";}
 
-function toggleModalAp(){modals[7].classList.toggle("show-modal");}
+function toggleModalAp(){modals[7].classList.toggle("show-modalC");}
 function toggleImgAp() {imgBs[7].style.display = "block";}
 
-function toggleModalAu(){modals[8].classList.toggle("show-modal");}
+function toggleModalAu(){modals[8].classList.toggle("show-modalC");}
 function toggleImgAu(){imgBs[8].style.display = "block";}
 
-function toggleModalD(){modals[9].classList.toggle("show-modal");}
+function toggleModalD(){modals[9].classList.toggle("show-modalC");}
 function toggleImgD(){imgBs[9].style.display = "block";}
 
-function toggleModalJ(){modals[10].classList.toggle("show-modal");}
+function toggleModalJ(){modals[10].classList.toggle("show-modalC");}
 function toggleImgJ(){imgBs[10].style.display = "block";}
 
-function toggleModalJ2(){modals[11].classList.toggle("show-modal");}
+function toggleModalJ2(){modals[11].classList.toggle("show-modalC");}
 function toggleImgJ2(){imgBs[11].style.display = "block";}
 
-function toggleModalJ3(){modals[12].classList.toggle("show-modal");}
+function toggleModalJ3(){modals[12].classList.toggle("show-modalC");}
 function toggleImgJ3(){imgBs[12].style.display = "block";}
 
-function toggleModalJ4(){modals[13].classList.toggle("show-modal");}
+function toggleModalJ4(){modals[13].classList.toggle("show-modalC");}
 function toggleImgJ4(){imgBs[13].style.display = "block";}
 
-function toggleModalJ5(){modals[14].classList.toggle("show-modal");}
+function toggleModalJ5(){modals[14].classList.toggle("show-modalC");}
 function toggleImgJ5(){imgBs[14].style.display = "block";}
 
-function toggleModalJ6(){modals[15].classList.toggle("show-modal");}
+function toggleModalJ6(){modals[15].classList.toggle("show-modalC");}
 function toggleImgJ6(){imgBs[15].style.display = "block";}
 
-function toggleModalJ7(){modals[16].classList.toggle("show-modal");}
+function toggleModalJ7(){modals[16].classList.toggle("show-modalC");}
 function toggleImgJ7(){imgBs[16].style.display = "block";}
 
-function toggleModalJ8(){modals[17].classList.toggle("show-modal");}
+function toggleModalJ8(){modals[17].classList.toggle("show-modalC");}
 function toggleImgJ8(){imgBs[17].style.display = "block";}
 
 
 function windowOnClick(event) {
+    
     if (event.target === modal && cardValue == 'DLeckie') {toggleModalA();}
     if (event.target === modal && cardValue == 'PMeredith') {toggleModalV();}
     if (event.target === modal && cardValue == 'HJeromin') {toggleModalAn();}
