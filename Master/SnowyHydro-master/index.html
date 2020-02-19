@@ -8,24 +8,15 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
         <!--<script src = "libraries/p5.js"></script>
         <script src = "scripts.js"></script>  -->
     <title>Snowy Mountains Hydro Memory Game</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
-    
     <link rel="stylesheet" href = "styles.css">
-<!--
-    <link href = "Bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    -->
+
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Righteous|Timmana&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
-    
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="sketch.js"></script>
     
 </head>
@@ -37,10 +28,10 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
 <!-----------------------------P5.JS-------------------------------------------------->
 <div id="loadOverlay">
         <div id = "overlayText">
-                <div id= "projectTitle"><strong>Snowy Mountains Hydroelectric Project</strong></div>
+                <div id = "overlayHeader"><strong>Snowy Mountains Hydroelectric Project</strong></div>
                 <br><br><br>
-                <div id= "projectSubtitle">Memory Game</div>
-                <div id ="overlayDescription">Learn more about this defining moment in Australia's history by playing the card game of memory. 
+                <div id= "overlaySubHeader">Memory Game and Quiz</div>
+                <div id ="h2_text">Learn more about this defining moment in Australia's history by playing the card game of memory. 
                         Match "pairs" of cards to reveal interesting stories about the men and women who worked 
                         on this project. Once the memory game is complete, test your knowledge on a quiz!</div>
                 <button type="button" id="buttonIntro" onClick="off()">PLAY GAME</button>
@@ -51,42 +42,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
         </div>
         <button type="button" id="buttonAuthor" onClick = "toggleModalTom()">Developed by Thomas Larkin</button>
         <button type="button" id="buttonTeacher" onClick = "toggleModalTeacher()">For Teachers</button>
-       
-       
-       
-
         <!-- Author Information Modal Popup (Thomas Larkin) -->
-        <div class="modalAuthor">
-                <div id = "thomas" class="modalAuthor-content">
-                        <div class="container">
-                                <div class="row">  
-                                        <div class="col teacherTitle">About the Creator</div>
-                                        <span class="close-buttonAuthor">&times;</span>
-                                </div>
-                                <div class="row top-buffer">
-                                        <div class="col-6 colText">
-                                                My name is Thomas Larkin. <br><br>
-                                                I study Engineering and Arts at the Australian National University. I made this digital resource as part
-                                                of a course investing the use of digital methods to reimagine historical artifacts. <br><br>
-                                                I decided to focus on the construction of the Snowy Mountains Hydroelectric system because I was fascinated 
-                                                by the impacts this project had on both the technical and social landscape of Australia.<br><br>
-                                                I built this resource using some basic web development skills, resources from the National Archives of Australia and 
-                                                the use of Adobe Illustrator to create each of the character cards in the memory game. <br><br>
-                                                I hope you enjoy using this digital resource! - January 2020 
-                                        </div>
-                                        <div class="col-6">
-                                                <img id = "modalIMGA" src="img/TLarkin_Sketch.svg" alt="TLarkin"/>
-                                        </div>
-                                </div>
-                                <div class="row top-buffer"></div>
-                        </div>
-                </div>
-        </div>
-
-
-        <!----------------------------------------------------->
-        
-        <!--
         <div class="modalAuthor">
                 <div id = "thomas" class="modalAuthor-content">
                         <span class="close-buttonAuthor">&times;</span>
@@ -107,96 +63,20 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                         <img id = "modalIMG" src="img/TLarkin_Sketch.svg" alt="TLarkin"/>
                 </div>
         </div>
-        -->
 
-<!-- EXPERIMENTING WITH BOOTSTRAP MODAL-->
-<!-- Button trigger modal
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-      </button>
-      
-      Modal
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
--->
-
-
+        <!-- Teacher Instruction Box Modal Popup  -->
         <div class="modalAuthor">
-                <div id = "thomas" class="modalTeacher-content">
-                        <div class="container">
-                                <div class="row">  
-                                        <div class="col teacherTitle">How to use this resource</div>
-                                        <span class="close-buttonAuthor">&times;</span>
+                <div id = "thomas" class="modalAuthor-content">
+                        <span class="close-buttonAuthor">&times;</span>
+                        <h1>For Teachers</h1>
+                        <div id = "modalInfoAuthor">
+                                <div id = "modalBlurbAuthor">
+                                      For Teachers<br><br>
+                                      
                                 </div>
-                                <div class="row top-buffer">
-                                        <div class="col-6 colText">
-                                                The first part of this resource is a memory game. There are 10 pairs of cards to match,
-                                                so 20 cards in total. Every time the game loads, a different set of 10 cards are chosen from 
-                                                a sample of 18. Each user will have different cards, in different positions to match.
-                                        </div>
-                                        <div class="col-6">
-                                                <img id = "instructionsT" src="img/teacherInstructions/instructions1.svg" alt="Teacher Instructions 1"/>
-                                        </div>
-                                </div>
-                                <div class="row top-buffer">
-                                        <div class="col-6">
-                                                <img id = "instructionsT" src="img/teacherInstructions/instructions2.svg" alt="Teacher Instructions 2"/>
-                                        </div>
-                                        <div class="col-6 colText">
-                                                Users can turn over cards by clicking on them. The aim of this first part of the resource is 
-                                                to match all 10 cards as quickly as possible.
-                                        </div>
-                                </div>
-                                <div class="row top-buffer">
-                                        <div class="col-6 colText">
-                                                When a user discovers a match, a popup will appear displaying further information about the 
-                                                person shown on the card. Each of the characters in this game is based on a real person 
-                                                who lived and worked on the Snowy Hydro Scheme. Other than the depiction of the person,
-                                                all other information is factual.
-                                        </div>
-                                        <div class="col-6">
-                                                <img id = "instructionsT" src="img/teacherInstructions/instructions3.svg" alt="Teacher Instructions 2"/>
-                                        </div>
-                                </div>
-                                <div class="row top-buffer">
-                                        <div class="col-6">
-                                                <img id = "instructionsT" src="img/teacherInstructions/instructions4.svg" alt="Teacher Instructions 3"/>
-                                        </div>
-                                        <div class="col-6 colText">
-                                                Once a user has correctly matched all 10 cards, they will be redirected to the second part of
-                                                this resource, a quiz. The quiz consists of 10 questions based on information from the 
-                                                10 cards the user has just matched.
-                                        </div>
-                                </div>
-                                <div class="row top-buffer">
-                                        <div class="col-6 colText">
-                                                During this quiz, the user can click on any of the character cards displayed along the 
-                                                bottom of the screen to read more information about that character. This will give the 
-                                                user all the resources they need to ensure they get the best score in the quiz!
-                                        </div>
-                                        <div class="col-6">
-                                                <img id = "instructionsT" src="img/teacherInstructions/instructions5.svg" alt="Teacher Instructions 5"/>
-                                        </div>
-                                </div>
-                                <div class="row top-buffer"></div>
+                                
                         </div>
+                        <img id = "modalIMG" src="img/TLarkin_Sketch.svg" alt="TLarkin"/>
                 </div>
         </div>
 
@@ -431,7 +311,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
 
         <!-- Trigger/Open The Modal -->
 
-        <!--First Card Modal -->
+        <!--First Card Modal-->
         <div class="modal">
                 <div id = "aurelia" class="modal-content">
                         <span class="close-button">&times;</span>
@@ -455,8 +335,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                 </div>
         </div>
 
-
-        <!--Second Card Modal -->
+        <!--Second Card Modal-->
         <div class="modal">
                 <div id = "vue" class="modal-content">
                         <span class="close-button">&times;</span>
@@ -507,7 +386,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                         during the Second World War. During this time, he was a prisoner of war for 
                                         5 years.<br><br> 
                                         He began his 26 year career with the Snowy Hydro Authority as a carpenter but over 
-                                        his career, he continued to gain promotions. Before his promotion to works 
+                                        his career he continued to gain promotions. Before his promotion to works 
                                         foreman, the following comments were made about Mr Jeromin:<br><br> 
                                         “His officer in charge has reported favourably on his ability to organise work 
                                         and handle men and considers him to be suitable for the position of works foreman.”    
@@ -567,7 +446,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 <div id = "modalBlurb">
                                 Kazys was employed and reclassified multiple times over his career with the Snowy 
                                 Hydro Authority. He began his work as a carpenter, but this work was not suited to his 
-                                body. As a result of his bad health, his doctor wrote the following letter to his 
+                                body. As a result of his bad health his doctor wrote the following letter to his 
                                 boss:<br><br> 
                                 “This man is suffering from heart disease...While it is desirable for him to continue 
                                 activity within his limits this work should be of the lightest sedentary grade...Thus 
@@ -589,20 +468,20 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 <strong>Years Employed: </strong>10<br>
                                 <strong>Country of Origin: </strong>Yugoslavia<br><br>
                                 <div id = "modalBlurb">
-                                Anton Glavica moved to Australia from a country called 
-                                <div class="tooltip">Yugoslavia
-                                        <span class="tooltiptext">Yugoslavia no longer exists. The place where Yugoslavia
-                                                used to be in Europe is now Serbia, Croatia and Macedonia
-                                        </span>
-                                </div>
-                                .
-                                <br><br>
-                                A ‘Chainman’ is another name for someone who performs surveying work. Surveyors take 
-                                detailed measurements of areas of land to make sure that infrastructure projects – such
-                                 as the construction of dams and hydroelectric power stations – is suitable.<br><br> 
-                                As a Chainman, Anton Glavica had a number of roles to perform. Some of these roles 
-                                included maintaining survey equipment, chopping down trees and bushland to clear 
-                                lines of sight and clearing walking tracks.     
+                                        Anton Glavica moved to Australia from a country called 
+                                        <div class="tooltip">Yugoslavia
+                                                <span class="tooltiptext">Yugoslavia no longer exists. The place where Yugoslavia
+                                                        used to be in Europe is now Serbia, Croatia and Macedonia
+                                                </span>
+                                        </div>
+                                        .
+                                        <br><br>
+                                        A ‘Chainman’ is another name for someone who performs surveying work. Surveyors take 
+                                        detailed measurements of areas of land to make sure that infrastructure projects – such
+                                         as the construction of dams and hydroelectric power stations – is suitable.<br><br> 
+                                        As a Chainman, Anton Glavica had a number of roles to perform. Some of these roles 
+                                        included maintaining survey equipment, chopping down trees and bushland to clear 
+                                        lines of sight and clearing walking tracks.     
                                 </div>  
                         </div>
                         <img id = "modalIMG" src="img/6.0_AGlavicaCard.svg" alt="AGlavica"/>
@@ -674,7 +553,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 <strong>Years Employed: </strong>14<br>
                                 <strong>Country of Origin: </strong>Netherlands<br><br>
                                 <div id = "modalBlurb">
-                                At the time of the Second World War Gerard was held as a prisoner for three years.
+                                At the time of the Second World War Gerard was held as a prisoner for three years by the Japanese.
                                 During this time, he was forced to work on the 
                                 <div class="tooltip">Burma Railway line
                                         <span class="tooltiptext">this was a railway line that was built to connect
@@ -733,8 +612,8 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 chase a new life. His wife and two children joined him on the trip to Australia for 
                                 work on the Snowy Hydro.
                                 <br><br>
-                                He spent 4 years working for the Snowy Hydro and afterwards, left to work on 
-                                electrical grid networks in NSW and later on, the Royal Air Force. He was described 
+                                He spent 4 years working for the Snowy Hydro and afterwards left to work on 
+                                electrical grid networks in NSW, and later on, the Royal Air Force. He was described 
                                 by his boss at the Snowy Hydro as being a "widely experienced, capable and energetic 
                                 engineer."
                                 </div>  
@@ -759,7 +638,13 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 and was successful!
                                 <br><br>
                                 Most of his work on the Snowy Hydro Scheme involved soil testing, rock bolt development 
-                                and technical report writing. Most of his work was situated around the Khancoban dam 
+                                and technical report writing. Most of his work was situated around the 
+                                <div class="tooltip">Khancoban
+                                        <span class="tooltiptext">Khancoban is a town in the Kosciuszko National Park
+                                                built to house workers of the Snowy Hydro scheme.
+                                        </span>
+                                </div>
+                                 dam 
                                 region of the project.
                                 </div>  
                         </div>
@@ -777,7 +662,13 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 <strong>Years Employed: </strong>17<br>
                                 <strong>Country of Origin: </strong>Australia<br><br>
                                 <div id = "modalBlurb">
-                                Before applying for her job as a tracer on the Snowy Hydro scheme, Constance had 
+                                Before applying for her job as a 
+                                <div class="tooltip">tracer
+                                        <span class="tooltiptext"> a tracer is someone who draws detailed drawings of equipment and objects such as 
+                                                generators, bridges and buildings
+                                        </span>
+                                </div>
+                                on the Snowy Hydro scheme, Constance had 
                                 experience working for an Engineering company in London and as an artist. She moved to 
                                 Cooma in 1957 and her work as a tracer involved sketching detailed drawings of gates, 
                                 valves, power plants and graphs.
@@ -803,9 +694,15 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 <strong>Country of Origin: </strong>Great Britain (born in New Zealand)<br><br>
                                 <div id = "modalBlurb">
                                 Rudolf was born in New Zealand and studied at university in Auckland. He applied for a position as an 
-                                Electrical Engineer but was instead offered the role of 'Scientific Officer', something he was not 
+                                <div class="tooltip">Electrical Engineer
+                                        <span class="tooltiptext"> An electrical engineer is someone who develops, repairs and manages
+                                                electrical circuits and the devices that they are used within
+                                        </span>
+                                </div> 
+                                 but was instead offered the role of 'Scientific Officer', something he was not 
                                 pleased about! At the same time, he was offered a promotion at his work in New Zealand, but decided 
-                                to accept the offer from the Snowy Hydro scheme, since he believed the work would be more interesting.
+                                to accept the offer from the Snowy Hydro scheme, since he believed that over time, the sort of work
+                                available in Australia would be more interesting.
                                 <br><br>
                                 He moved his family from New Zealand to Australia to begin work with the Snowy Hydro 
                                 scheme in 1956.
@@ -857,7 +754,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 <div id = "modalBlurb">
                                 Thomas worked as an electrical engineer for the Snowy Hydro scheme. He was a highly skilled 
                                 employee and during his time here, was granted 2 years of leave to undertake work experience in 
-                                Sweden. The Snowy Hydro scheme believed that in gaining experience abroad, Mr Crawford would return 
+                                Sweden. The Snowy Hydro scheme believed that in gaining experience abroad Mr Crawford would return 
                                 with new knowledge to benefit the project in Australia.
                                 <br><br>
                                 After enjoying work and life in Europe, he petitioned to remain abroad for longer than 
@@ -924,10 +821,10 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                 used in the construction of topographical scale models for publicity purposes and in the 
                                 construction of models for the hydraulics laboratory.
                                 <br><br>
-                                In his first year of work with the Snowy Hydro authority, he prepared scale models of the 
+                                In his first year of work with the Snowy Hydro authority he prepared scale models of the 
                                 Snowy Mountains area which were used for display purposes in Melbourne and Sydney.
                                 His skills were highly sought after by the scheme and he spent some time on transfer with 
-                                the Public Relations team in Sydney producing display models of the Snowy Hydro Scheme.
+                                the Public Relations team in Sydney, producing display models of the Snowy Hydro Scheme.
                                 <br><br>
                                 He was skilled with his hands and his work as a model maker also led to work in restoring 
                                 furniture for the Snowy Hydro scheme.
