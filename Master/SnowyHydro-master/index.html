@@ -29,19 +29,21 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
 <div id="loadOverlay">
         <div id = "overlayText">
                 <div id = "overlayHeader"><strong>Snowy Mountains Hydroelectric Project</strong></div>
-                <br><br><br>
+                <br><br><br><br>
                 <div id= "overlaySubHeader">Memory Game and Quiz</div>
+
                 <div id ="h2_text">Learn more about this defining moment in Australia's history by playing the card game of memory. 
                         Match "pairs" of cards to reveal interesting stories about the men and women who worked 
                         on this project. Once the memory game is complete, test your knowledge on a quiz!</div>
-                <button type="button" id="buttonIntro" onClick="off()">PLAY GAME</button>
-                <!--
-                <div id="h3">Read more about this defining moment in Australia's history <a href="https://www.nma.gov.au/defining-moments/resources/snowy-mountains-hydro">here</a>.</div>
-        -->
-                
+                <div id = "rowOv1">
+                        <button type="button" id="buttonIntro" class = "mainButton" onClick="off()">PLAY GAME</button>
+                </div>
+                <br>
+                <div id = "rowOv2">
+                        <button type="button" id="buttonIntro" class = "subButtonL" onClick = "toggleModalTeacher()">For Teachers</button>
+                        <button type="button" id="buttonIntro" class = "subButtonR" onClick = "toggleModalTom()">Developed by Thomas Larkin</button>
+                </div>
         </div>
-        <button type="button" id="buttonAuthor" onClick = "toggleModalTom()">Developed by Thomas Larkin</button>
-        <button type="button" id="buttonTeacher" onClick = "toggleModalTeacher()">For Teachers</button>
         <!-- Author Information Modal Popup (Thomas Larkin) -->
         <div class="modalAuthor">
                 <div id = "thomas" class="modalAuthor-content">
