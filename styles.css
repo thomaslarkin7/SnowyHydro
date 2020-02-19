@@ -24,40 +24,40 @@ content {position: relative; z-index: 2; }
 }
 
 #overlayText{
-    position: relative;
-    top: 20%;
-    color: white;
-    display: inline-block;
-    font-family: 'Roboto';
-}
-
-#projectTitle{
-    font-size: 5vw;
-}
-
-#projectSubtitle{
-    font-size: 6vw;
-    font-family: 'Timmana';
-}
-
-#overlayDescription{
-    font-family: 'Roboto';
-    font-size: 1.7vw;
-    text-align: justify;
     position: absolute;
-    left: 15%;
-    right: 15%; 
+    top: 15%;
+    /*
+    position: relative;
+    top: 15%;
+    */
+    height: 85%;
+    color: white;
+    /*
+    display: inline-block;
+    */
+    font-family: 'Roboto';
+
 }
 
-#h1{
-    font-size: 70px;
+#overlayHeader{
+    font-size: 5.5vw;
 }
 
-#h2{
+#overlaySubHeader{
     font-family: 'Timmana';
-    font-size: 80px;
+    font-size: 5.5vw;
+    top: 25%;
 }
 
+#h2_text{
+    font-family: 'Roboto';
+    font-size: 1.8vw;
+    text-align: justify;
+    position: relative;
+    left: 15%;
+    width: 70%;
+    right: 15%;
+}
 
 #h3{
     font-size: 20px;
@@ -67,14 +67,12 @@ content {position: relative; z-index: 2; }
 }
 
 #buttonIntro{
-    position: relative;
+    
     background-color: white;
     color: black;
     border: 5px solid black;
     font-family: 'Timmana';
     padding: 16px 16px 0px 16px;
-    font-size: 45px;
-    top: 20vh;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     border-radius: 10px;
@@ -86,6 +84,34 @@ content {position: relative; z-index: 2; }
     border: 5px solid white;
     color: white;
   }
+
+  .mainButton{
+    font-size: 3.0vw;
+}
+
+  .subButtonL{
+      position: absolute;
+      left: 1%;
+      bottom: 1%;
+      font-size: 1.3vw;
+  }
+
+  .subButtonR{
+    position: absolute;
+    right: 1%;
+    bottom: 1%;
+    font-size: 1.3vw;
+}
+
+#rowOv1{
+    
+    display: inline-block;
+}
+
+#rowOv2{
+    
+    display: inline-block;
+}
 
   #buttonAuthor{
     position: absolute;
@@ -373,13 +399,6 @@ canvas{
 /*----------------------------------------------------*/
 /*--https://sabe.io/tutorials/how-to-create-modal-popup-box-- */
 
-.top-buffer { margin-top:25px; }
-.teacherTitle{text-align: center; font-family: 'Timmana'; font-size: 3.5vw;}
-.colText{
-    font-size: 1.4vw;
-    text-align: justify;
-}
-
 .modal {
     position: fixed;
     left: 0;
@@ -387,10 +406,8 @@ canvas{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    
     opacity: 0;
     visibility: hidden;
-    
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
@@ -405,7 +422,7 @@ canvas{
     color: white;
     padding: 1rem 1.5rem;
     width: 60%;
-    height: 55%;
+    height: 65%;
     border-radius: 0.5rem;
 }
 
@@ -452,6 +469,13 @@ canvas{
     background-color: darkgray;
 }
 
+#authorT{
+    font-size: 2.4vw;
+    text-align: center;
+    font-family: 'Timmana';
+    padding: 3%;
+}
+
 .modalInstructions {
     position: fixed;
     overflow-y: auto;
@@ -481,33 +505,30 @@ canvas{
 }
 
 #modalIMG{
-    
-    position: -webkit-sticky;
     position: sticky;
+    position: -webkit-sticky;
+    
+    /*
+    width: 100%;
+    */
+    top: 5%;
+    /*
     top: 5%;
     left: 43%;
     height: 82%;
     width: 55%;
-}
-
-#instructionsT{
-    top: 5%;
-    bottom: 5%;
-    /*
-    height: 100%;
     */
-    
-    width: 100%;
-    
+
 }
 
 #modalInfo{
     position: absolute;
     text-align: justify;
+/*
     top: 13%;
     left: 20px;
+  */
     color: white;
-    right: 55%;
     font-size: 20px;
     line-height: 30px;
 }
@@ -515,43 +536,81 @@ canvas{
 #modalInfoAuthor{
     position: absolute;
     text-align: justify;
-    top: 13%;
-    left: 20px;
     color: black;
-    /*
-    right: 55%;
-    */
     font-size: 20px;
     line-height: 30px;
 }
 
+.modalTitle{
+    font-size: 3.0vw;
+    text-align: center;
+    font-family: 'Timmana';
+    padding: 1%;
+}
 
-/*
+#modalInfoTeacher{
+    position: absolute;
+    display: block;
+    text-align: justify;
+    color: black;
+    width: 90%;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.teacherText{
+    font-size: 2.4vw;
+    text-align: center;
+    font-family: 'Timmana';
+    padding: 3%;
+    
+}
+
+
+
+.colA{
+    padding: 5px;
+    width: 50%; 
+    float: left;
+
+}
+
+.colAM{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0%;
+    padding: 5px;
+    width: 50%; 
+    float: left;
+
+}
+
+/* Clear floats after the columns */
+.rowA:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.instructionT{
+    width: 100%;
+}
+
+.instructionTx{
+    font-size: 1.5vw;
+    line-height: 2.0vw;
+    padding: 1%;
+}
+
 #modalBlurbAuthor{
 
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 1.2vw;
+    line-height: 2.0vw;
 }
-*/
-
-.show-modal {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1.0);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-}
-
 
 #modalBlurb{
-    font-size: 15px;
-    line-height: 20px;
-}
-
-.show-modalC {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1.0);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    font-size: 1.2vw;
+    line-height: 2.0vw;
 }
 .close-button {
     float: right;
@@ -565,6 +624,12 @@ canvas{
 .close-button:hover {
     background-color: darkgray;
 }
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
 
 /* Tooltip container */
 .tooltip {
@@ -576,7 +641,7 @@ canvas{
   /* Tooltip text */
   .tooltip .tooltiptext {
     visibility: hidden;
-    width: 180px;
+    width: 12vw;
     background-color: #555;
     color: #fff;
     text-align: center;

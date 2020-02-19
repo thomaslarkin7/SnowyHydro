@@ -1,4 +1,4 @@
-//Memory Game: T Larkin
+window//Memory Game: T Larkin
 
 //Make a list of all memory card elements and store this inside a constant named 'cards'
 //const cards = document.querySelectorAll('.memory-card');
@@ -138,6 +138,7 @@ function checkForMatch(){
     //ternary operator
     isMatch ? disableCards() : unflipCards();
 }//end function checkForMatch
+
 //console.log(imgBs);
     //If the cards matched are the Australia Cards, toggle 'Australia' Modal
 
