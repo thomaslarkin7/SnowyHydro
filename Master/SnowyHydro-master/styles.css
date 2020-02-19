@@ -530,6 +530,42 @@ canvas{
     line-height: 30px;
 }
 
+#modalInfoTeacher{
+    position: absolute;
+    display: block;
+    text-align: justify;
+    color: black;
+    width: 90%;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.teacherText{
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Timmana';
+    
+}
+
+
+.colA{
+    border: solid orange;
+    padding: 5px;
+    width: 50%; 
+    float: left;
+}
+
+/* Clear floats after the columns */
+.rowA:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.instructionT{
+    width: 100%;
+}
+
 #modalBlurbAuthor{
 
     font-size: 20px;
