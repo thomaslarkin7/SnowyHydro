@@ -422,7 +422,7 @@ canvas{
     color: white;
     padding: 1rem 1.5rem;
     width: 60%;
-    height: 55%;
+    height: 65%;
     border-radius: 0.5rem;
 }
 
@@ -469,6 +469,13 @@ canvas{
     background-color: darkgray;
 }
 
+#authorT{
+    font-size: 2.4vw;
+    text-align: center;
+    font-family: 'Timmana';
+    padding: 3%;
+}
+
 .modalInstructions {
     position: fixed;
     overflow-y: auto;
@@ -498,23 +505,30 @@ canvas{
 }
 
 #modalIMG{
-    
-    position: -webkit-sticky;
     position: sticky;
+    position: -webkit-sticky;
+    
+    /*
+    width: 100%;
+    */
+    top: 5%;
+    /*
     top: 5%;
     left: 43%;
     height: 82%;
     width: 55%;
+    */
 
 }
 
 #modalInfo{
     position: absolute;
     text-align: justify;
+/*
     top: 13%;
     left: 20px;
+  */
     color: white;
-    right: 55%;
     font-size: 20px;
     line-height: 30px;
 }
@@ -522,12 +536,16 @@ canvas{
 #modalInfoAuthor{
     position: absolute;
     text-align: justify;
-    top: 13%;
-    left: 20px;
     color: black;
-    right: 55%;
     font-size: 20px;
     line-height: 30px;
+}
+
+.modalTitle{
+    font-size: 3.0vw;
+    text-align: center;
+    font-family: 'Timmana';
+    padding: 1%;
 }
 
 #modalInfoTeacher{
@@ -541,18 +559,30 @@ canvas{
 }
 
 .teacherText{
-    font-size: 35px;
+    font-size: 2.4vw;
     text-align: center;
     font-family: 'Timmana';
+    padding: 3%;
     
 }
 
 
+
 .colA{
-    border: solid orange;
     padding: 5px;
     width: 50%; 
     float: left;
+
+}
+
+.colAM{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0%;
+    padding: 5px;
+    width: 50%; 
+    float: left;
+
 }
 
 /* Clear floats after the columns */
@@ -566,15 +596,21 @@ canvas{
     width: 100%;
 }
 
+.instructionTx{
+    font-size: 1.5vw;
+    line-height: 2.0vw;
+    padding: 1%;
+}
+
 #modalBlurbAuthor{
 
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 1.2vw;
+    line-height: 2.0vw;
 }
 
 #modalBlurb{
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 1.2vw;
+    line-height: 2.0vw;
 }
 .close-button {
     float: right;
@@ -605,7 +641,7 @@ canvas{
   /* Tooltip text */
   .tooltip .tooltiptext {
     visibility: hidden;
-    width: 180px;
+    width: 12vw;
     background-color: #555;
     color: #fff;
     text-align: center;

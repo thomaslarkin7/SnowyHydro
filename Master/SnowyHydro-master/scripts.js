@@ -1,4 +1,4 @@
-//Memory Game: T Larkin
+window//Memory Game: T Larkin
 
 //Make a list of all memory card elements and store this inside a constant named 'cards'
 //const cards = document.querySelectorAll('.memory-card');
