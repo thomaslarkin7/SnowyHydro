@@ -323,6 +323,7 @@ function resetBoard(){
 function off(){
     document.getElementById("loadOverlay").style.display = "none";
     document.getElementById("navBottom").style.display = "flex";
+    document.getElementsByClassName('memory-game')[0].style.display = "flex";
     
 }
 

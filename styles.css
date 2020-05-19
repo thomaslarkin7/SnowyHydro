@@ -18,14 +18,16 @@ content {position: relative; z-index: 2; }
     left:0;
     right:0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.932);
+    /*
+    background-color: rgb(255, 255, 255);
+    */
     z-index: 2;
     
 }
 
 #overlayText{
     position: absolute;
-    top: 15%;
+    top: 10%;
     /*
     position: relative;
     top: 15%;
@@ -54,9 +56,9 @@ content {position: relative; z-index: 2; }
     font-size: 1.8vw;
     text-align: justify;
     position: relative;
-    left: 15%;
-    width: 70%;
-    right: 15%;
+    left: 20%;
+    width: 60%;
+    right: 20%;
 }
 
 #h3{
@@ -331,7 +333,7 @@ canvas{
     /*display flex pre-sets some properties for us. 
     (a) each item will take the same amount of space in the screen
     (b) items will be stretched out across the row and arranged from L to R*/
-    display: flex;
+    display: none;
     /*flex-wrap allows the card items to be laid out across multiple rows*/
     flex-wrap: wrap;
     /*Add some 3D depth to our display*/
