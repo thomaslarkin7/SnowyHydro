@@ -257,19 +257,52 @@ canvas{
     color: white;
     padding: 1rem 1.5rem;
     width: 60%;
-    height: 75%;
+    height: 65%;
     border-radius: 0.5rem;
+}
+
+.modalTitle{
+  font-size: 3.0vw;
+  text-align: center;
+  font-family: 'Timmana';
+  padding: 1%;
+}
+
+.colA{
+  padding: 5px;
+  width: 50%; 
+  float: left;
+
+}
+
+.colAM{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0%;
+  padding: 5px;
+  width: 50%; 
+  float: left;
+
+}
+
+/* Clear floats after the columns */
+.rowA:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 #modalIMG{
   /*
   position: absolute;
   */
-  position: -webkit-sticky;
   position: sticky;
-  top: 15%;
+  position: -webkit-sticky;
+  top: 5%;
+  /*
   left: 55%;
   height: 75%;
+  */
   /*
   width: 60%;
   */
@@ -278,17 +311,18 @@ canvas{
 #modalInfo{
   position: absolute;
   text-align: justify;
+  /*
   top: 13%;
   left: 5%;
+  */
   color: white;
-  right: 50%;
   font-size: 20px;
   line-height: 30px;
 }
 
 #modalBlurb{
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 1.2vw;
+  line-height: 2.0vw;
 }
 .close-button {
   float: right;
