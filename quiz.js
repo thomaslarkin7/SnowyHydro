@@ -278,11 +278,11 @@ var all_questions = [{
       if (percentage === 1) {
         message = 'Great job!'
       } else if (percentage >= .75) {
-        message = 'You did alright.'
+        message = 'You did well.'
       } else if (percentage >= .5) {
-        message = 'Better luck next time.'
+        message = 'Not bad, a passing score.'
       } else {
-        message = 'Maybe you should try a little harder.'
+        message = 'Maybe you should try again.'
       }
       $('#quiz-results-message').text(message);
       $('#quiz-results-score').html('You got <b>' + score + '/' + self.questions.length + '</b> questions correct.');
