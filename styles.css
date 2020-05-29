@@ -372,13 +372,16 @@ canvas{
     height: calc(25% - 10px);
     margin: 5px;
     position: relative;
+    -webkit-transform: scale(1);
     transform: scale(1);
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     transition: transform .5s;
 }
 
 /*When a card item is clicked, transform to 0.97 of original size*/
 .memory-card:active {
+    -webkit-transform: scale(0.97);
     transform: scale(0.97);
     /*Add smoothness to this transformation*/
     transition: transform .2s;
@@ -386,6 +389,7 @@ canvas{
 
 /*When the card is clicked, rotate the Y axis 180 degrees.*/
 .memory-card.flip {
+-webkit-transform: rotateY(180deg);
  transform: rotateY(180deg);
 }
 
@@ -419,6 +423,7 @@ canvas{
 }
 
 .front-face {
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
@@ -510,7 +515,7 @@ canvas{
     color: black;
     padding: 1rem 1.5rem;
     width: 40%;
-    height: 25%;
+    height: 35%;
     border-radius: 0.5rem;
 }
 
