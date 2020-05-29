@@ -31,26 +31,50 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
 
         <!-----------------------------P5.JS-------------------------------------------------->
         <div id="loadOverlay">
+                <div id="helpBar">
+                        <button type="button" id="buttonIntro" class="subButtonHelp" onClick="toggleModalTeacher()">For Teachers</button>
+                        <button type="button" id="buttonIntro" class="subButtonHelp" onClick = "toggleModalHelp()">HELP</button>
+                </div>
+
                 <div id="overlayText">
                         <div id="overlayHeader"><strong>Snowy Hydro Who's Who</strong></div>
                         <br><br><br><br>
                         <div id="overlaySubHeader">Memory Game and Quiz</div>
 
+                        <div id= "textIMGs">
+                        <div id="loadingIMG_L">
+                                <img src="img/4.0_IBotkaCard.svg" alt="IBotka" />
+                        </div>
                         <div id="h2_text">Explore the Snowy Hydro defining moment in Australian history with a memory
                                 game. Match pairs of cards to reveal interesting stories about the people who worked on
-                                this enormous, pioneering project. Then test your knowledge with a quiz!</div>
+                                this enormous, pioneering project. Then test your knowledge with a quiz! <br>
+                        </div>
+                        <div id="loadingIMG_R">
+                                <img src="img/15.0_PJFrenchCard.svg" alt="PJFrench" />
+                        </div>
+                        </div>
                         <div id="rowOv1">
                                 <button type="button" id="buttonIntro" class="mainButton" onClick="off()">PLAY
                                         GAME</button>
                         </div>
-                        <br>
                         <div id="rowOv2">
-                                <button type="button" id="buttonIntro" class="subButtonL"
-                                        onClick="toggleModalTeacher()">For Teachers</button>
                                 <button type="button" id="buttonIntro" class="subButtonR"
                                         onClick="toggleModalTom()">Developed by Thomas Larkin</button>
                         </div>
                 </div>
+                
+                <!-- Help Button Modal Popup -->
+                <div class="modalHelp">
+                        <div class = "modalHelp-content">
+                                <span class="close-buttonHelp">&times;</span>
+                                <div style="font-size: 1.5rem; text-align: justify; color: white">
+                                        <br>
+                                        For the best performance of this resource, please use in the Google Chrome browser on a laptop or desktop computer. Other broswers (Safari, Firefox, Internet Explorer) may not work as well.
+                                </div>
+                        </div>
+                        
+                </div>
+                
                 <!-- Author Information Modal Popup (Thomas Larkin) -->
                 <div class="modalAuthor">
                         <div id="thomas" class="modalAuthor-content">
@@ -189,7 +213,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek&t=10s -->
                                                         cards displayed along the bottom of the webpage. Doing this will
                                                         cause the information popup to appear.
                                                         All of the answers to the quiz questions can be found in these
-                                                        information popups, with some reading involved!.
+                                                        information popups, with some reading involved!
                                                 </div>
                                         </div>
                                 </div>

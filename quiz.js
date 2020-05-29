@@ -10,6 +10,9 @@ var imgBs = document.getElementsByClassName('imgB');
 var closeButtons = document.getElementsByClassName('close-button');
 var closeButton = document.querySelector(".close-button");
 
+//progress Bar
+var progBar = document.getElementById("quizUpdate");
+
 var quizNum = boardSize; //boardSize variable taken directly from the scripts.js file
 
 
@@ -220,8 +223,12 @@ var all_questions = [{
       self.questions[current_question_index].render(question_container);
       $('#prev-question-button').prop('disabled', current_question_index === 0);
       $('#next-question-button').prop('disabled', current_question_index === self.questions.length - 1);
-     
-      
+
+      // When the question is changed, update the progress bar
+      var barW; //bar width initially 0
+      barW = 10 + current_question_index*10;
+      progBar.style.width = barW + "%";
+
       // Determine if all questions have been answered
       var all_questions_answered = true;
       for (var i = 0; i < self.questions.length; i++) {
@@ -230,17 +237,19 @@ var all_questions = [{
           break;
         }
       }
-      $('#submit-button').prop('disabled', !all_questions_answered); //enable the 'submit' button if all of the questions have been answered
+      //$('#submit-button').prop('disabled', !all_questions_answered); //enable the 'submit' button if all of the questions have been answered
     }
     
     // Render the first question
     var current_question_index = 0;
+    //$('#quizUpdate').html('Progress: Question <b>' + (current_question_index + 1) + '/10');
     change_question();
     
     // Add listener for the previous question button
     $('#prev-question-button').click(function() {
       if (current_question_index > 0) {
         current_question_index--;
+        //$('#quizUpdate').html('Progress: Question <b>' + (current_question_index+1) + '/10');
         change_question();
       }
     });
@@ -249,9 +258,12 @@ var all_questions = [{
     $('#next-question-button').click(function() {
       if (current_question_index < self.questions.length - 1) {
         current_question_index++;
+        //$('#quizUpdate').html('Progress: Question <b>' + (current_question_index+1) + '/10');
         change_question();
       }
     });
+
+    //console.log(current_question_index);
    
     // Add listener for the submit answers button
     $('#submit-button').click(function() {
@@ -296,6 +308,7 @@ var all_questions = [{
     
     // Add a listener on the questions container to listen for user select changes. This is for determining whether we can submit answers or not.
     question_container.bind('user-select-change', function() {
+
       var all_questions_answered = true;
       for (var i = 0; i < self.questions.length; i++) {
         if (self.questions[i].user_choice_index === null) {
@@ -303,7 +316,7 @@ var all_questions = [{
           break;
         }
       }
-      $('#submit-button').prop('disabled', !all_questions_answered);
+      //$('#submit-button').prop('disabled', !all_questions_answered);
     });
   }
   
@@ -409,7 +422,7 @@ var all_questions = [{
     // Render the quiz
     var quiz_container = $('#quiz');
     quiz.render(quiz_container);
-    console.log("successful rendering here");
+    
   });
 
 

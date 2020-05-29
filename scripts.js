@@ -1,5 +1,8 @@
 window//Memory Game: T Larkin
 
+//Alert the user of the broswer they are using
+console.log(navigator.userAgent);
+
 //Make a list of all memory card elements and store this inside a constant named 'cards'
 //const cards = document.querySelectorAll('.memory-card');
 let cards = document.querySelectorAll('.memory-card');
@@ -62,6 +65,10 @@ var modal = document.querySelector(".modal");
 // Get the modal
 var modals = document.getElementsByClassName('modal');
 var imgBs = document.getElementsByClassName('imgB');
+
+//HELP Button popup modal
+var modalHelp = document.getElementsByClassName('modalHelp');
+var closeButtonHelp = document.getElementsByClassName('close-buttonHelp');
 
 // Author popup modal
 var modalAuthor = document.getElementsByClassName('modalAuthor');
@@ -141,15 +148,21 @@ function checkForMatch(){
 
 //console.log(imgBs);
     //If the cards matched are the Australia Cards, toggle 'Australia' Modal
+    console.log(modalHelp[0]);
+    console.log(modalAuthor[0]);
+function toggleModalHelp(){
+    modalHelp[0].classList.toggle("show-modal");
+    console.log("Help button clicked here");
+}
 
-function toggleModalTom(){
+    function toggleModalTom(){
     modalAuthor[0].classList.toggle("show-modal");
     console.log("something clicked here");
 }
 
 function toggleModalTeacher(){
     modalAuthor[1].classList.toggle("show-modal");
-    console.log("something clicked here");
+    //console.log("something clicked here");
 }
 
 function toggleModalA(){modals[0].classList.toggle("show-modal");}
@@ -323,6 +336,7 @@ function resetBoard(){
 function off(){
     document.getElementById("loadOverlay").style.display = "none";
     document.getElementById("navBottom").style.display = "flex";
+    document.getElementById("buttonHome").style.display = "flex";
     document.getElementsByClassName('memory-game')[0].style.display = "flex";
     
 }
@@ -331,6 +345,8 @@ function off(){
 //MODAL LISTENERS
 //TAKEN FROM this webpage https://sabe.io/tutorials/how-to-create-modal-popup-box
 //trigger.addEventListener("click", toggleModal);
+closeButtonHelp[0].addEventListener("click", toggleModalHelp); //close button
+
 closeButtonsAuthor[0].addEventListener("click", toggleModalTom); //Close Button A
 closeButtonsAuthor[1].addEventListener("click", toggleModalTeacher); //Close Button A
 
