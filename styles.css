@@ -89,7 +89,7 @@ content {position: relative; z-index: 2; }
     border: 5px solid black;
     font-family: 'Timmana';
     padding: 16px 16px 0px 16px;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration:  0.4s; /* Safari */
     transition-duration: 0.4s;
     border-radius: 10px;
     cursor: pointer;
@@ -150,7 +150,7 @@ content {position: relative; z-index: 2; }
     font-size: 24px;
     top: 90vh;
     right: 3vh;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration:  0.4s; /* Safari */
     transition-duration: 0.4s;
     border-radius: 10px;
     cursor: pointer;
@@ -362,7 +362,7 @@ canvas{
     display: none;
     /*flex-wrap allows the card items to be laid out across multiple rows*/
     flex-wrap: wrap;
-    /*Add some 3D depth to our display*/
+    /*Add some 3D depth to the display*/
     perspective: 1000px;
 }
 
@@ -389,9 +389,11 @@ canvas{
 
 /*When the card is clicked, rotate the Y axis 180 degrees.*/
 .memory-card.flip {
--webkit-transform: rotateY(180deg);
- transform: rotateY(180deg);
+-webkit-transform: rotateY(-180deg);
+/*
+ transform: rotateY(180deg); */
 }
+
 
 .front-face{
     /*front and back face will occupy 100% of their containers*/
@@ -424,8 +426,11 @@ canvas{
 
 .front-face {
     -webkit-transform: rotateY(180deg);
+    /*
     transform: rotateY(180deg);
+    */
 }
+
 
 
 /*-----------------MODAL STUFF BELOW------------------*/

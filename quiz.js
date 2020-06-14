@@ -1,3 +1,5 @@
+var modalStudent = document.getElementsByClassName('modalStudent');
+var closeStudent = document.getElementsByClassName('close-buttonStudent');
 // Get the modal
 var modals = document.getElementsByClassName('modal');
 var imgBs = document.getElementsByClassName('imgB');
@@ -425,6 +427,10 @@ var all_questions = [{
     
   });
 
+function toggleModalSHelp(){
+  console.log("Student Help Clicked");
+  modalStudent[0].classList.toggle("show-modal");
+}
 
 function toggleModalA(){modals[0].classList.toggle("show-modal");}
 function toggleImgA(){imgBs[0].style.visibility = "visible";}
@@ -490,6 +496,8 @@ window.onclick = function(event) {
 }
 
 //console.log(closeButtons[0]);
+closeStudent[0].addEventListener("click", toggleModalSHelp);
+
 closeButtons[0].addEventListener("click", toggleModalA); //Close Button A
 closeButtons[0].addEventListener("click", toggleImgA); //Img A to appear
 

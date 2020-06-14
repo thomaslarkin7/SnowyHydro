@@ -86,6 +86,7 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 //listen for a 'click' event and when this fires, we will run the 'card flip' function
 //Begin function flipCard
 function flipCard(){
+    
     //if the lockBoard variable is true, do not execute the rest of the code 
     if (lockBoard) return;
     //to prevent the same card from being clicked twice and locking out the game

@@ -41,8 +41,11 @@ canvas{
   }
   
   .imgBottom{
-
+    
+    display: -moz-flex;
     display: flex;
+    /*display: -moz-inline-block; */
+
     height: 20%;
     /*
     border: solid white;
@@ -60,15 +63,15 @@ canvas{
     /*
   display: block;
   */
+  display: -moz-flex;
   display: flex;
+  flex-direction: row;
   height: 100%;
-    background-color: rgb(66, 123, 221);
-    border: 5px solid black;
-    border-radius: 5px;
-    
-    width: 95%;
-    
-    padding: 4.5%;;
+  background-color: rgb(66, 123, 221);
+  border: 5px solid black;
+  border-radius: 5px;  
+  width: 100%;  
+  padding: 0.5%;
 }
 
 
@@ -85,16 +88,12 @@ canvas{
 
 
 #buttonNav{
-  position: absolute;
-  top: 2%;
-  right: 2%;
   background-color: white;
   color: black;
   border: 5px solid black;
   font-family: 'Timmana';
-  
   padding: 8px 8px 0px 8px;
-  font-size: 20px;
+  font-size: 1.2vw;
   
   /* top: 20vh;  */
   -webkit-transition-duration: 0.4s; /* Safari */
@@ -109,6 +108,97 @@ canvas{
   color: white;
 }
 
+.quizButtonHelp1{
+  position: absolute;
+  top: 2%;
+  right: 15%;
+}
+
+.quizButtonHelp2{
+  position: absolute;
+  top: 2%;
+  right: 1%;
+}
+
+
+.modalStudent {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modalStudent-content {
+  position: absolute;
+  overflow-y: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*
+  background-color: rgb(114, 131, 181);
+  */
+  background-color:rgb(66, 123, 221);
+  font-family: 'Roboto';
+  color: black;
+  padding: 1rem 1.5rem;
+  width: 45%;
+  height: 65%;
+  border-radius: 0.5rem;
+}
+
+.close-buttonStudent {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+.close-buttonStudent:hover {
+  background-color: darkgray;
+}
+
+#modalInfoStudent{
+  position: absolute;
+  display: block;
+  text-align: justify;
+  color: black;
+  width: 90%;
+  padding: 15px;
+  font-size: 1.5stickvw;
+  line-height: 30px;
+}
+
+.colA{
+  top: 5%;
+  padding: 15px;
+  width: 50%; 
+  float: left;
+
+}
+
+.colAM{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0%;
+  padding: 5px;
+  width: 50%; 
+  float: left;
+
+}
+
+/* Clear floats after the columns */
+.rowA:after {
+  content: "";
+  display: table;
+  clear: both;
+}
   #quiz {
     /*
     margin: -44px 50px 0px;

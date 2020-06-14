@@ -47,10 +47,10 @@ DEALINGS IN THE SOFTWARE.
 </head>
 
 <body>
-
-    <div>
-        
-    </div>
+        <div>
+                <button type="button" id="buttonNav" class = "quizButtonHelp1" onClick = "toggleModalSHelp()">FOR STUDENTS</button>
+                <button type="button" id="buttonNav" class = "quizButtonHelp2"  onClick = "window.location.href = 'index.html'">BACK TO MEMORY GAME</button>
+        </div>
     <div id="quiz">
         <h1 id="quiz-name"></h1>
         
@@ -69,13 +69,10 @@ DEALINGS IN THE SOFTWARE.
 </div>
         
     
-    <div>
-        
-        <button type="button" id="buttonNav" onClick = "window.location.href = 'index.html'">BACK TO MEMORY GAME</button>
-    </div>
+
 
     <div class="imgBottom">
-                <div class="img-hover-zoom DLeckie">
+               <div class="img-hover-zoom DLeckie">
                         <img class="imgB" onclick = "toggleModalA()" src="img/1.0_DLeckieCard.svg" alt="DLeckie"/>
                 </div>
 
@@ -145,10 +142,78 @@ DEALINGS IN THE SOFTWARE.
                 <div class="img-hover-zoom FRGibbs">
                         <img class="imgB" onclick = "toggleModalJ8()" src="img/18.0_FRGibbsCard.svg" alt="FRGibbs"/>
                 </div>
+        
+<!--
+                <img class="img-hover-zoom DLeckie" class="imgB" onclick = "toggleModalA()" src="img/1.0_DLeckieCard.svg" alt="DLeckie"/>
 
+                <img class="imgB" onclick = "toggleModalV()" src="img/2.0_PMeredithCard.svg" alt="PMeredith"/>
+ 
+                <img class="imgB" onclick = "toggleModalAn()" src="img/3.0_HJerominCard.svg" alt="HJeromin"/>
+
+                <img class="imgB" onclick = "toggleModalE()" src="img/4.0_IBotkaCard.svg" alt="IBotka"/>
+ 
+                <img class="imgB" onclick = "toggleModalB()" src="img/5.0_KSinkeviciusCard.svg" alt="KSinkevicius"/>
+
+                <img class="imgB" onclick = "toggleModalR()" src="img/6.0_AGlavicaCard.svg" alt="AGlavica"/>
+
+                <img class="imgB" onclick = "toggleModalH()" src="img/7.0_JPeskaCard.svg" alt="JPeska"/>
+
+                <img class="imgB" onclick = "toggleModalAp()" src="img/8.0_RLodgeCard.svg" alt="RLodge"/>
+
+                <img class="imgB" onclick = "toggleModalAu()" src="img/9.0_GVanWezelCard.svg" alt="GVanWezel"/>
+
+                <img class="imgB" onclick = "toggleModalD()" src="img/10.0_ABeranekCard.svg" alt="ABeranek"/>
+
+                <img class="imgB" onclick = "toggleModalJ()" src="img/11.0_HEHGibbsCard.svg" alt="HGibbs"/>
+
+                <img class="imgB" onclick = "toggleModalJ2()" src="img/12.0_RTBrodieCard.svg" alt="RBrodie"/>
+
+                <img class="imgB" onclick = "toggleModalJ3()" src="img/13.0_CDHarveyCard.svg" alt="CHarvey"/>
+
+                <img class="imgB" onclick = "toggleModalJ4()" src="img/14.0_REBelinCard.svg" alt="RBelin"/>
+
+                <img class="imgB" onclick = "toggleModalJ5()" src="img/15.0_PJFrenchCard.svg" alt="PJFrench"/>
+
+                <img class="imgB" onclick = "toggleModalJ6()" src="img/16.0_TMCrawfordCard.svg" alt="TMCrawford"/>
+
+                <img class="imgB" onclick = "toggleModalJ7()" src="img/17.0_JGottsCard.svg" alt="JGotts"/>
+
+                <img class="imgB" onclick = "toggleModalJ8()" src="img/18.0_FRGibbsCard.svg" alt="FRGibbs"/>
+-->
                 
     </div>
 
+
+    <!-- Teacher Instruction Box Modal Popup  -->
+    <div class="modalStudent">
+        <div id="studentHelp" class="modalStudent-content">
+                <span class="close-buttonStudent">&times;</span>
+                <div id="modalInfoStudent">
+                        <div class="rowA">
+                                <div class="colA instructionTx">
+                                        The 10 character cards you see below should match the 10 cards from your memory game. You will need to use the information from these 10 cards to complete the quiz.
+                                </div>
+                                <div class="colA">
+                                        <img class="instructionT"
+                                                src="img/teacherInstructions/instructions5.svg"
+                                                alt="TeacherInstructions5" />
+                                </div>
+                        </div>
+
+                        <div class="rowA">
+                                <div class="colA">
+                                        <img class="instructionT"
+                                                src="img/teacherInstructions/instructions6.svg"
+                                                alt="TeacherInstructions6" />
+                                </div>
+                                <div class="colA instructionTx">
+                                        Although some of the quiz questions may seem a little tricky, there are plenty of hints.
+                                        If you get stuck, click on any of the character cards at the bottom of this page to learn more about the person on the card.
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>
     
     <!--First Card Modal-->
     <div class="modal">
