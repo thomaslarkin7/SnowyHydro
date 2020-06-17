@@ -168,10 +168,10 @@ canvas{
   position: absolute;
   display: block;
   text-align: justify;
-  color: black;
+  color: white;
   width: 90%;
   padding: 15px;
-  font-size: 1.5stickvw;
+  font-size: 1.5vw;
   line-height: 30px;
 }
 

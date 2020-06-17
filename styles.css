@@ -636,7 +636,7 @@ canvas{
     position: absolute;
     display: block;
     text-align: justify;
-    color: black;
+    color: white;
     width: 90%;
     font-size: 20px;
     line-height: 30px;
@@ -692,6 +692,7 @@ canvas{
 
     font-size: 1.2vw;
     line-height: 2.0vw;
+    color: white;
 }
 
 #modalBlurb{
