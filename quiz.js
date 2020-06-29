@@ -17,6 +17,8 @@ var progBar = document.getElementById("quizUpdate");
 
 var quizNum = boardSize; //boardSize variable taken directly from the scripts.js file
 
+var removeCardsArray = JSON.parse(sessionStorage.getItem("cardNotDisplay"));
+console.log("Quiz Remove Cards" + removeCardsArray);
 
     // Card 1 to remove from Game
     var card1 = document.getElementsByClassName(removeCardsArray[0]);
@@ -406,6 +408,9 @@ var all_questions = [{
     var quiz = new Quiz('Snowy Hydro Quiz');
     
     // Create Question objects from all_questions and add them to the Quiz object
+
+    console.log(removeCards);
+    //Show which cards need to be removed
 
     // recall that numUniqueCards is the number of unique cards used in the previous memory game (not all displayed)
     for (var i = 0; i < numUniqueCards; i++) {

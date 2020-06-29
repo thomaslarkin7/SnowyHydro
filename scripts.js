@@ -1,7 +1,6 @@
 window//Memory Game: T Larkin
 
 //Alert the user of the broswer they are using
-console.log(navigator.userAgent);
 
 //Make a list of all memory card elements and store this inside a constant named 'cards'
 //const cards = document.querySelectorAll('.memory-card');
@@ -38,12 +37,13 @@ while(randN < numUniqueCards - boardSize){
         randN++;
     }
 }
-//console.log(removeCards);
+
 var removeCardsArray = [cardNames[removeCards[0]], cardNames[removeCards[1]], cardNames[removeCards[2]], cardNames[removeCards[3]],
                         cardNames[removeCards[4]], cardNames[removeCards[5]], cardNames[removeCards[6]], cardNames[removeCards[7]],
 ]
-//console.log(removeCardsArray);
-
+console.log("Memory Game remove cards " + removeCardsArray);
+// save the cards to display in the game to the local storage
+sessionStorage.setItem("cardNotDisplay", JSON.stringify(removeCardsArray));
 
 var quizBut = document.getElementsByClassName('buttonQuiz')[0];
 
@@ -56,7 +56,8 @@ for (var j = 0; j<numUniqueCards; j++){
     }
 }
 
-//console.log(cardNamesDisplay);
+//console.log("Memory Game included cards " + cardNamesDisplay);
+//these are the cards which will be displayed
 
 //MODAL VARIABLES
 //Taken from this webpage https://sabe.io/tutorials/how-to-create-modal-popup-box
@@ -149,8 +150,8 @@ function checkForMatch(){
 
 //console.log(imgBs);
     //If the cards matched are the Australia Cards, toggle 'Australia' Modal
-    console.log(modalHelp[0]);
-    console.log(modalAuthor[0]);
+    //console.log(modalHelp[0]);
+    //console.log(modalAuthor[0]);
 function toggleModalHelp(){
     modalHelp[0].classList.toggle("show-modal");
     console.log("Help button clicked here");
@@ -158,12 +159,12 @@ function toggleModalHelp(){
 
     function toggleModalTom(){
     modalAuthor[0].classList.toggle("show-modal");
-    console.log("something clicked here");
+    
 }
 
 function toggleModalTeacher(){
     modalAuthor[1].classList.toggle("show-modal");
-    //console.log("something clicked here");
+    
 }
 
 function toggleModalA(){modals[0].classList.toggle("show-modal");}
@@ -273,7 +274,7 @@ function resetBoard(){
 } //end function resetBoard
 
 (function shuffle(){
-    console.log("first invoked function");
+    //console.log("first invoked function");
     //   removeCardsArray
 
     // Card 1 to remove from Game
@@ -409,4 +410,12 @@ window.addEventListener("click", windowOnClick);
 
 function loadHome(){
     location.reload();
+}
+
+function goToQuiz(){
+    console.log("supposed to navigate to quiz");
+    //history.pushState({}, null, quiz.html);
+    //window.history.go(1);
+    //window.history.replaceState(null, null, "/quiz.html");
+    window.location.href = 'quiz.html';
 }
