@@ -15,10 +15,18 @@ var closeButton = document.querySelector(".close-button");
 //progress Bar
 var progBar = document.getElementById("quizUpdate");
 
+let boardSize = 10;
+let numUniqueCards = 18;
+
 var quizNum = boardSize; //boardSize variable taken directly from the scripts.js file
 
-var removeCardsArray = JSON.parse(sessionStorage.getItem("cardNotDisplay"));
-console.log("Quiz Remove Cards" + removeCardsArray);
+var removeCardsArray = JSON.parse(localStorage.getItem("cardNotDisplay"));
+var removeCards = JSON.parse(localStorage.getItem("removeNotDisplay"));
+
+//console.log(JSON.parse(removeCards));
+
+//console.log(localStorage.getItem("TestVariable"));
+//console.log("Remove Cards from Local Storage  " + removeCardsArray);
 
     // Card 1 to remove from Game
     var card1 = document.getElementsByClassName(removeCardsArray[0]);
@@ -409,7 +417,7 @@ var all_questions = [{
     
     // Create Question objects from all_questions and add them to the Quiz object
 
-    console.log(removeCards);
+    //console.log(removeCards);
     //Show which cards need to be removed
 
     // recall that numUniqueCards is the number of unique cards used in the previous memory game (not all displayed)
@@ -433,7 +441,7 @@ var all_questions = [{
   });
 
 function toggleModalSHelp(){
-  console.log("Student Help Clicked");
+  //console.log("Student Help Clicked");
   modalStudent[0].classList.toggle("show-modal");
 }
 

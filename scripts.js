@@ -7,6 +7,8 @@ window//Memory Game: T Larkin
 let cards = document.querySelectorAll('.memory-card');
 //console.log(cards.length);
 
+
+
 let numUniqueCards = 18;
 let boardSize = 10;
 let matchedCards = 0;
@@ -38,12 +40,26 @@ while(randN < numUniqueCards - boardSize){
     }
 }
 
+var currentLoc = window.location.toString();
+//console.log(currentLoc.includes("quiz"));
+
+
 var removeCardsArray = [cardNames[removeCards[0]], cardNames[removeCards[1]], cardNames[removeCards[2]], cardNames[removeCards[3]],
-                        cardNames[removeCards[4]], cardNames[removeCards[5]], cardNames[removeCards[6]], cardNames[removeCards[7]],
+    cardNames[removeCards[4]], cardNames[removeCards[5]], cardNames[removeCards[6]], cardNames[removeCards[7]],
 ]
-console.log("Memory Game remove cards " + removeCardsArray);
+
+removeCardsArrayPass = JSON.stringify(removeCardsArray);
+removeCardsPass = JSON.stringify(removeCards);
+
 // save the cards to display in the game to the local storage
-sessionStorage.setItem("cardNotDisplay", JSON.stringify(removeCardsArray));
+localStorage.setItem("cardNotDisplay", removeCardsArrayPass);
+localStorage.setItem("removeNotDisplay", removeCardsPass);
+
+
+console.log("Memory Game remove cards " + removeCardsArrayPass);
+
+//localStorage.setItem("TestVariable", 24);
+
 
 var quizBut = document.getElementsByClassName('buttonQuiz')[0];
 
